@@ -42,3 +42,18 @@ html, body{
     right: 20px;
     z-index: 2;
 }
+
+.horiz-frame{
+	width: 100%;
+	height: 20%;
+	background-color: #0000003b;
+	position: fixed;
+}
+
+.vert-frame{
+	top: 20%;
+	height: 60%;
+	width: 20%;
+	background-color: #0000003b;
+	position: fixed;
+}
