@@ -31,5 +31,10 @@ cameraTrigger.onclick = function() {
     // track.stop();
 };
 
+cameraOutput.onclick = function() {
+	var image = cameraOutput.toDataURL("image/png").replace("image/png", "image/octet-stream");
+	window.location.href=image;
+}
+
 // Start the video stream when the window loads
 window.addEventListener("load", cameraStart, false);
