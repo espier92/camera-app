@@ -1,6 +1,7 @@
 // Set constraints for the video stream
 var constraints = { video: { facingMode: "environment" }, audio: false };
 var track = null;
+var takenImage = null
 
 // Define constants
 const cameraView = document.querySelector("#camera--view"),
@@ -26,15 +27,20 @@ cameraTrigger.onclick = function() {
     cameraSensor.width = cameraView.videoWidth;
     cameraSensor.height = cameraView.videoHeight;
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
-    cameraOutput.src = cameraSensor.toDataURL("image/webp");
-    cameraOutput.classList.add("taken");
+    // cameraOutput.src = cameraSensor.toDataURL("image/webp");
+	
+    // cameraOutput.classList.add("taken");
+	
     // track.stop();
+	
+	var image = cameraSensor.toDataURL("image/png").replace("image/png", "image/octet-stream");
+	window.location.href=image;
 };
 
-cameraOutput.onclick = function() {
-	var image = cameraOutput.toDataURL("image/png").replace("image/png", "image/octet-stream");
-	window.location.href=image;
-}
+// cameraOutput.onclick = function() {
+	// var image = cameraSensor.toDataURL("image/png").replace("image/png", "image/octet-stream");
+	// window.location.href=image;
+// }
 
 // Start the video stream when the window loads
 window.addEventListener("load", cameraStart, false);
