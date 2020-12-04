@@ -7,7 +7,7 @@ html, body{
 
 @font-face {
     font-family: OstrichSans;
-    src: url("../fonts/OstrichSans-Medium.woff") format("woff"), url("../fonts/OstrichSans-Medium.ttf")  format("truetype");
+    src: url("lib/fonts/OstrichSans-Medium.woff") format("woff"), url("lib/fonts/OstrichSans-Medium.ttf")  format("truetype");
 }
 
 #camera, #camera--view, #camera--sensor, #camera--output{
