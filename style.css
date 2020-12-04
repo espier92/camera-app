@@ -5,6 +5,11 @@ html, body{
   width: 100%;
 }
 
+@font-face {
+    font-family: OstrichSans;
+    src: url("../fonts/OstrichSans-Medium.woff") format("woff"), url("../fonts/OstrichSans-Medium.ttf")  format("truetype");
+}
+
 #camera, #camera--view, #camera--sensor, #camera--output{
     position: fixed;
     height: 100%;
