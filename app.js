@@ -27,10 +27,15 @@ cameraTrigger.onclick = function() {
 	cameraSensor.width = cameraView.videoWidth;
     cameraSensor.height = cameraView.videoHeight;
     
+	// cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
+    // cameraOutput.src = cameraSensor.toDataURL("image/webp");
+    // cameraOutput.classList.add("taken");
+    
 	
 	
 	var ctx = cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
-	var imgData = ctx.getImageData(0, 0, cameraSensor.width, cameraSensor.height);
+	console.log(ctx)
+	var imgData = cameraSensor.getImageData(0, 0, cameraSensor.width, cameraSensor.height);
 
 	// invert colors
 	var sumaPixelsR = 0;
@@ -52,7 +57,7 @@ cameraTrigger.onclick = function() {
 		msg.innerHTML=mediaPixelsR + ' ; ' +mediaPixelsG + ' ; ' +mediaPixelsB + ' ; '
 	}
 	
-	ctx.putImageData(imgData, 0, 0);
+	// ctx.putImageData(imgData, 0, 0);
 	
 	
 	cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
