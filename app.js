@@ -36,7 +36,7 @@ cameraTrigger.onclick = function() {
 	var ctx = cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
 	console.log(ctx)
 	var imgData = cameraSensor.getContext("2d").getImageData(0, 0, cameraSensor.width, cameraSensor.height);
-
+	console.log(imgData)
 	// invert colors
 	var sumaPixelsR = 0;
 	var sumaPixelsG = 0;
@@ -52,10 +52,10 @@ cameraTrigger.onclick = function() {
 	var mediaPixelsG=sumaPixelsG/contPixels
 	var mediaPixelsB=sumaPixelsB/contPixels
 	msg=document.getElementById("message");
-	if (msg.style.display == 'none'){
-		msg.style.display = 'block'
-		msg.innerHTML=mediaPixelsR + ' ; ' +mediaPixelsG + ' ; ' +mediaPixelsB + ' ; '
-	}
+	// if (msg.style.display == 'none'){
+	msg.style.display = 'block'
+	msg.innerHTML=mediaPixelsR + ' ; ' +mediaPixelsG + ' ; ' +mediaPixelsB + ' ; '
+	// }
 	
 	// ctx.putImageData(imgData, 0, 0);
 	
