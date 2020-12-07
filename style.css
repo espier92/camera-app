@@ -64,7 +64,7 @@ html, body{
 }
 
 .horiz-lineu{
-	top: 18%;
+	top: 20%;
 	left:20%;
 	height: 1%;
 	width: 60%;
@@ -81,18 +81,18 @@ html, body{
 }
 
 .vert-linel{
-	top:18%;
+	top:20%;
 	left:19%;
-	height: 62%;
+	height: 60%;
 	width: 1%;
 	background-color: #FFF;
 	position: fixed;
 }
 
 .vert-liner{
-	top:18%;
+	top:20%;
 	right:20%;
-	height: 62%;
+	height: 60%;
 	width: 1%;
 	background-color: #FFF;
 	position: fixed;
