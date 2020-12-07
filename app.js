@@ -35,7 +35,7 @@ cameraTrigger.onclick = function() {
 	
 	var ctx = cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
 	console.log(ctx)
-	var imgData = cameraSensor.getImageData(0, 0, cameraSensor.width, cameraSensor.height);
+	var imgData = cameraSensor.getContext("2d").getImageData(0, 0, cameraSensor.width, cameraSensor.height);
 
 	// invert colors
 	var sumaPixelsR = 0;
