@@ -58,6 +58,10 @@ cameraTrigger.onclick = function() {
 		// msg.innerHTML=mediaPixelsR + ' ; ' +mediaPixelsG + ' ; ' +mediaPixelsB + ' ; '
 		msg.innerHTML='Poca luz, por favor, repita la foto'
 	}
+	else{
+		msg=document.getElementById("message");
+		msg.style.display = 'none'
+	}
 	
 	
 	// ctx.putImageData(imgData, 0, 0);
