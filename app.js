@@ -51,11 +51,14 @@ cameraTrigger.onclick = function() {
 	var mediaPixelsR=sumaPixelsR/contPixels
 	var mediaPixelsG=sumaPixelsG/contPixels
 	var mediaPixelsB=sumaPixelsB/contPixels
-	msg=document.getElementById("message");
-	// if (msg.style.display == 'none'){
-	msg.style.display = 'block'
-	msg.innerHTML=mediaPixelsR + ' ; ' +mediaPixelsG + ' ; ' +mediaPixelsB + ' ; '
-	// }
+	var mediaTotal = (mediaPixelsR+mediaPixelsG+mediaPixelsB)/3
+	if (mediaTotal < 90){
+		msg=document.getElementById("message");
+		msg.style.display = 'block'
+		// msg.innerHTML=mediaPixelsR + ' ; ' +mediaPixelsG + ' ; ' +mediaPixelsB + ' ; '
+		msg.innerHTML='Poca luz, por favor, repita la foto'
+	}
+	
 	
 	// ctx.putImageData(imgData, 0, 0);
 	
